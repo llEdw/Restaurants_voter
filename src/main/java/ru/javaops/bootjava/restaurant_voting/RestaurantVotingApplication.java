@@ -1,4 +1,4 @@
-package ru.webapp.bootjava.restaurant_voting;
+package ru.javaops.bootjava.restaurant_voting;
 
 import lombok.AllArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
