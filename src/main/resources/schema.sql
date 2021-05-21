@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS restaurants;
--- DROP TABLE IF EXISTS dishes;
+DROP TABLE IF EXISTS dishes;
 DROP TABLE IF EXISTS users;
--- DROP TABLE IF EXISTS votes;
 DROP TABLE IF EXISTS user_role;
+-- DROP TABLE IF EXISTS votes;
 
 CREATE TABLE restaurants
 (
@@ -12,14 +12,14 @@ CREATE TABLE restaurants
     constraint name_address UNIQUE (name, address)
 );
 
--- CREATE TABLE dishes
--- (
---     id INT IDENTITY PRIMARY KEY,
---     restaurant_id INT NOT NULL,
---     name VARCHAR(100) NOT NULL,
---     price INT NOT NULL,
---     FOREIGN KEY (restaurant_id) REFERENCES restaurants (id) ON DELETE CASCADE
--- );
+CREATE TABLE dishes
+(
+    id INT IDENTITY PRIMARY KEY,
+    restaurant_id INT NOT NULL,
+    name VARCHAR(128) NOT NULL,
+    price INT NOT NULL,
+    FOREIGN KEY (restaurant_id) REFERENCES restaurants (id) ON DELETE CASCADE
+);
 
 CREATE TABLE users
 (

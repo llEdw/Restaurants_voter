@@ -8,6 +8,7 @@ import ru.javaops.bootjava.util.JsonDeserializers;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -22,17 +23,19 @@ import java.util.Set;
 @ToString(callSuper = true, exclude = {"password"})
 public class User extends BaseEntity implements Serializable {
 
-    @Column(name = "email", nullable = false, unique = true)
+    @Column(name = "email", unique = true)
     @Email
-    @NotEmpty
+    @NotBlank
     @Size(max = 128)
     private String email;
 
     @Column(name = "first_name")
+    @NotBlank
     @Size(max = 128)
     private String firstName;
 
     @Column(name = "last_name")
+    @NotBlank
     @Size(max = 128)
     private String lastName;
 
