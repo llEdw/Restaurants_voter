@@ -3,7 +3,7 @@ Restaurant Voting System Project
 
 This is REST API implementation of voting system for deciding where to have lunch.
 
-### Technology stack used: 
+### Technology stack: 
 
 * Spring Boot
 * Spring MVC
@@ -29,27 +29,36 @@ This is REST API implementation of voting system for deciding where to have lunc
 
 
 #### AccountController
-- /api/account                              - GET, DELETE, PUT
-- /api/account/register                     - POST
-- /api/account/users                        - GET, POST
-- /api/account/users/by-email?email=*       - GET
-- /api/account/users/by-lastname?ln=*       - GET
-- /api/account/users/id                     - GET, DELETE, PUT
+- /api/account                              - **GET, DELETE, PUT**
+- /api/account/register                     - **POST**
+- /api/account/users                        - **GET, POST**
+- /api/account/users/by-email?email=*       - **GET**
+- /api/account/users/by-lastname?ln=*       - **GET**
+- /api/account/users/id                     - **GET, DELETE, PUT**
 
 #### RestaurantController
-- /api/restaurants                          - GET, POST
-- /api/restaurants/id                       - GET, DELETE, PUT
-- /api/restaurants/by?name=*                - GET
+- /api/restaurants                          - **GET, POST**
+- /api/restaurants/id                       - **GET, DELETE, PUT**
+- /api/restaurants/by?name=*                - **GET**
 
 #### DishController
-- /api/restaurants/alldishes                - GET
-- /api/restaurants/alldishes/by?name=*      - GET
-- /api/restaurants/alldishes/filter?a=*&b=* - GET
-- /api/restaurants/id/dishes                - GET, POST
-- /api/restaurants/id/dishes/id             - GET, DELETE, PUT
+- /api/restaurants/alldishes                - **GET**
+- /api/restaurants/alldishes/by?name=*      - **GET**
+- /api/restaurants/alldishes/filter?a=*&b=* - **GET**
+- /api/restaurants/id/dishes                - **GET, POST**
+- /api/restaurants/id/dishes/id             - **GET, DELETE, PUT**
 
 #### VoteController
-- /api/votes                                - GET
-- /api/votes/all                            - GET
-- /api/votes/restaurants                    - GET
+- /api/votes                                - **GET**
+- /api/votes/all                            - **GET**
+- /api/votes/restaurants                    - **GET**
 
+
+
+
+### Domain model 
+
+
+
+
+![image](https://user-images.githubusercontent.com/69795454/119143951-df36e980-ba50-11eb-9f4c-186d9ee20ab6.png)
