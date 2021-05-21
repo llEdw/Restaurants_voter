@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS restaurants;
 DROP TABLE IF EXISTS dishes;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS user_role;
--- DROP TABLE IF EXISTS votes;
+DROP TABLE IF EXISTS votes;
 
 CREATE TABLE restaurants
 (
@@ -37,4 +37,12 @@ CREATE TABLE user_role
     role    VARCHAR(255),
     CONSTRAINT user_roles_unique UNIQUE (user_id, role),
     FOREIGN KEY (user_id) REFERENCES USERS (id) ON DELETE CASCADE
+);
+
+CREATE TABLE votes
+(
+    id INT IDENTITY PRIMARY KEY,
+    user_id INT NOT NULL,
+    restaurant_id INT NOT NULL,
+    voting_time TIME NOT NULL
 );

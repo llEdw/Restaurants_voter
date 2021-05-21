@@ -13,6 +13,7 @@ import ru.javaops.bootjava.service.RestaurantService;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.time.LocalTime;
 import java.util.List;
 
 import static ru.javaops.bootjava.util.ValidationUtil.assureIdConsistent;

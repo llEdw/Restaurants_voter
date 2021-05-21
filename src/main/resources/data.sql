@@ -1,15 +1,26 @@
 DELETE FROM restaurants;
--- DELETE FROM dishes;
+DELETE FROM dishes;
 DELETE FROM users;
+DELETE FROM votes;
 
 INSERT INTO USERS (EMAIL, FIRST_NAME, LAST_NAME, PASSWORD)
 VALUES ('user@gmail.com', 'User_First', 'User_Last', '{noop}password'),
-       ('admin@javaops.ru', 'Admin_First', 'Admin_Last', '{noop}admin');
+       ('admin@javaops.ru', 'Admin_First', 'Admin_Last', '{noop}admin'),
+       ('enokent1990@yandex.ru', 'Игорь', 'sa_Last', '{noop}password'),
+       ('OlegEvgenievich@gmail.com', 'Олег', 'csaas', '{noop}password'),
+       ('lv1951@rambler.ru', 'ЛюдвигВалентинович', 'wqcsa', '{noop}password'),
+       ('zaharovii@mail.ru', 'Ильдар', 'csa', '{noop}password'),
+       ('vnkruchkov@rambler.ru', 'Володя', 'sact', '{noop}password');
 
 INSERT INTO USER_ROLE (ROLE, USER_ID)
 VALUES ('USER', 1),
        ('ADMIN', 2),
-       ('USER', 2);
+       ('USER', 2),
+       ('USER', 3),
+       ('USER', 4),
+       ('USER', 5),
+       ('USER', 6),
+       ('USER', 7);
 
 INSERT INTO restaurants (name, address)
 VALUES ('Toscana Grill', 'наб. канала Грибоедова, 64'),
