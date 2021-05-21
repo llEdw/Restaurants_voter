@@ -26,7 +26,7 @@ This is REST API implementation of voting system for deciding where to have lunc
     - If it is after 11:00 then it is too late, vote can't be changed
 * Each restaurant provides a new menu each day.
 
-
+## Rest architecture:
 
 #### AccountController
 - /api/account                              - **GET, DELETE, PUT**
