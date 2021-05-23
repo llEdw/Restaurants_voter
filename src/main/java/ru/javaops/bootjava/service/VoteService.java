@@ -20,7 +20,7 @@ public class VoteService {
     public Vote save(int restaurantId, int userId, LocalTime time) {
         log.info("restaurant with id = {} has been chosen by user with id = {} at {}", restaurantId, userId, time);
         Vote oldVote = voteRepository.findByUserId(userId).orElse(null);
-        if (voteRepository.findByUserId(userId).orElse(null) != null) {
+        if (oldVote != null) {
             if (time.isAfter(voteBound)) {
                 return oldVote;
             }
