@@ -42,16 +42,14 @@ This is REST API implementation of voting system for deciding where to have lunc
 - /api/restaurants/by?name=*                - **GET**
 
 #### DishController
-- /api/restaurants/alldishes                - **GET**
-- /api/restaurants/alldishes/by?name=*      - **GET**
-- /api/restaurants/alldishes/filter?a=*&b=* - **GET**
+- /api/dishes                - **GET**
+- /api/dishes/by?name=*      - **GET**
+- /api/dishes/filter?a=*&b=* - **GET**
 - /api/restaurants/id/dishes                - **GET, POST**
 - /api/restaurants/id/dishes/id             - **GET, DELETE, PUT**
 
 #### VoteController
-- /api/votes                                - **GET**
-- /api/votes/all                            - **GET**
-- /api/votes/restaurants                    - **GET**
+- /api/votes                                - **GET, POST**
 
 
 
