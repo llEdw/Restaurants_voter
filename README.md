@@ -60,3 +60,12 @@ This is REST API implementation of voting system for deciding where to have lunc
 
 
 ![image](https://user-images.githubusercontent.com/69795454/119143951-df36e980-ba50-11eb-9f4c-186d9ee20ab6.png)
+
+### Authorization input
+* Admin
+- Login - admin@javaops.ru
+- Password - admin
+* User
+- Login - user@gmail.com
+- Password - password
+
