@@ -30,9 +30,8 @@ public class Dish extends BaseEntity implements Serializable {
     @Column(name = "price")
     private int price;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "restaurant_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     private Restaurant restaurant;
 }

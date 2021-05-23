@@ -3,7 +3,6 @@ package ru.javaops.bootjava.service;
 import javassist.NotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import ru.javaops.bootjava.model.Restaurant;
@@ -20,7 +19,7 @@ public class RestaurantService {
 
     public List<Restaurant> getAll() {
         log.info("get all restaurants");
-        return restaurantRepository.findAll(Sort.by(Sort.Direction.ASC, "name"));
+        return restaurantRepository.getAll();
     }
 
     public Restaurant save(Restaurant restaurant) {

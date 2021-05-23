@@ -15,4 +15,7 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Integer>
 
     @Query("SELECT r FROM Restaurant r WHERE LOWER(r.name) =:name ORDER BY r.name")
     List<Restaurant> getByName(@Param("name") String name);
+
+    @Query("SELECT r FROM Restaurant r ORDER BY r.name")
+    List<Restaurant> getAll();
 }
